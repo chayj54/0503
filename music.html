@@ -27,6 +27,8 @@
 
 
 	</style>
+	
+
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -105,6 +107,9 @@
 			</div>
 
 
+			<!-- <iframe width="100%" src="https://www.youtube.com/watch?v=i0p1bmr0EmE" frameborder="0" allowfullscreen=""></iframe>
+ -->
+
 			<!-- <div class="embed-responsive embed-responsive-4by3" style="background-color: #999;">
   			<iframe class="embed-responsive-item" src="https://youtu.be/-oJbwQZvvHA"></iframe>
 			</div> -->
@@ -136,5 +141,11 @@
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
+
+<script type="text/javascript">
+	  $(window).resize(function(){resizeYoutube();});
+	  $(function(){resizeYoutube();});
+	  function resizeYoutube(){ $("iframe").each(function(){ if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ $(this).css("width","100%"); $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 480 / 854 ) + "px");} }); }
+</script>
 </body>
 </html>
